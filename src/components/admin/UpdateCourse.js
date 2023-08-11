@@ -3,11 +3,10 @@ import { useParams } from 'react-router-dom';
 
 import Sidebar from './Sidebar'
 
-
 import { useDispatch, useSelector } from 'react-redux'
 import { updateCourse, getCourseDetails} from '../../actions/courseActions'
 import { UPDATE_COURSE_RESET } from '../../constants/courseConstants'
-import {useNavigate} from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; 
 
 
 const UpdateCourse = ({  history }) => {

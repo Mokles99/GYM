@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import CoursesItem from '../components/CoursesItem';
 import { CoursesDiffList } from '../helpers/CoursesList';
-import backImage from '../assets/backrouge3.jpeg';
+
 import '../styles/Courses.css'
+
 function Courses() {
   const [liste2, setListe2] = useState([])
   useEffect(async()=>{

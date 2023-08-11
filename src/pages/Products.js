@@ -12,15 +12,16 @@ function Products() {
   
   
   const [imc, setIMC] = useState (undefined)
-const [liste2, setList2] = useState([])
-  useEffect(async()=>{
   
+  const [liste2, setList2] = useState([])
+  useEffect(async()=>{
     var response = await fetch('http://localhost:5000/api/v1/products')
     var data = await response.json()
    // console.log(data)
     setList2(data.products)
-    
   } ,[])
+
+
   const handleChange = (evt) =>{
     const weight = document.querySelector('[name=weight').value;
     const height = document.querySelector('[name=height').value;

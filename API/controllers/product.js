@@ -15,9 +15,7 @@ exports.newProduct = catchAsyncErrors(async (req, res, next) => {
     console.log("@@@")
     images = req.body.images;
   }
-
   let imagesLinks = [];
-
   for (let i = 0; i < images.length; i++) {
     const result = await cloudinary.v2.uploader.upload(images[i], {
       folder: "products",
@@ -77,7 +75,6 @@ exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
   } else {
     images = req.body.images;
   }
-
   if (images !== undefined) {
     // Deleting images associated with the product
     for (let i = 0; i < product.images.length; i++) {

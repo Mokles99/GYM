@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../../styles/SideBar.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const Sidebar = () => {
+const Sidebar=() => {
     return (
         <div className="sidebar-wrapper">
             <nav id="sidebar">

@@ -9,9 +9,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCoachs, deleteCoach } from "../../actions/coachActions";
 import { DELETE_COACH_RESET } from "../../constants/coachConstants";
 
-const CoachsList = ({ history }) => {
+  const CoachsList = ({ history }) => {
   const dispatch = useDispatch();
-
+  
   const { loading, error, coachs } = useSelector((state) => state.coachs);
   const { isDeleted } = useSelector((state) => state.product);
 
@@ -42,16 +42,6 @@ const CoachsList = ({ history }) => {
           field: "name",
           sort: "asc",
         },
-        //  {
-        //      label: 'Price',
-        //      field: 'price',
-        //      sort: 'asc'
-        //  },
-        //  {
-        //    label: 'Stock',
-        //  field: 'stock',
-        // sort: 'asc'
-        // },
         {
           label: "Actions",
           field: "actions",
